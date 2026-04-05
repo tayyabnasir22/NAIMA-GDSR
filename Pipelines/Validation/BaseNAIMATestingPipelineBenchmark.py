@@ -3,7 +3,6 @@ from Models.BenchmarkType import BenchmarkType
 from Pipelines.Validation.BaseTestingPipeline import BaseTestingPipeline
 from Utilities.PathManager import PathManager
 from Utilities.DataLoaders import DataLoaders
-import os
 
 class BaseNAIMATestingPipelineBenchmark(BaseTestingPipeline):
     def __init__(

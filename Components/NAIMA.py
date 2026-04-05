@@ -5,7 +5,6 @@ import torch
 from Components.ConvOps import ConvOps
 from Components.DinoV2.DinoVisionTransformer import DinoVisionTransformer
 from Components.FeatureFusion import FeatureFusion
-from Utilities.PathManager import PathManager
 
 class NAIMA(nn.Module):
     def __init__(

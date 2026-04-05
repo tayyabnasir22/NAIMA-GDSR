@@ -16,7 +16,6 @@ class NAIMA_TrainingHelper(TrainingHelperBase):
     def __init__(self, pipeline: BaseNAIMATrainingPipeline):
         super().__init__(
             pipeline=pipeline,
-            validation_metric_seed=99999
         )
         self.loss = SimpleGradientL1Loss(lambda_grad=0.1)
 

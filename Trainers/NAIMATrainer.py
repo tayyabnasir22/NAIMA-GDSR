@@ -2,11 +2,8 @@ from ModelFactories.BaseModelFactory import BaseModelFactory
 from Models.BenchmarkType import BenchmarkType
 from Models.ModelType import ModelType
 from Pipelines.Training.BaseNAIMATrainingPipeline import BaseNAIMATrainingPipeline
-from Pipelines.Validation.BaseNAIMATestingPipeline import BaseNAIMATestingPipeline
-from Pipelines.Validation.BaseNAIMATestingPipelineBenchmark import BaseNAIMATestingPipelineBenchmark
 from Trainers.BaseTrainer import BaseTrainer
 from TrainingHelpers.NAIMA_TrainingHelper import NAIMA_TrainingHelper
-from TrainingHelpers.TrainingHelperBase import TrainingHelperBase
 from Utilities.PathManager import PathManager
 import os
 
@@ -56,9 +53,7 @@ class NAIMATrainer(BaseTrainer):
         pipeline = self._GetPipeline()
 
         self._training_helper = NAIMA_TrainingHelper(
-            pipeline, 
-            self._scale,
-            self._input_patch
+            pipeline
         )
 
         # 2. Build the model

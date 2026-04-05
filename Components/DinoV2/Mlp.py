@@ -2,7 +2,6 @@ from typing import Callable, Optional
 from torch import Tensor
 import torch.nn as nn
 
-
 class Mlp(nn.Module):
     def __init__(
         self,

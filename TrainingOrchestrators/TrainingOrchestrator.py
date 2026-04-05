@@ -6,7 +6,7 @@ class TrainingOrchestrator:
     BATCH = 3 # Batch 1 for 16 scale
     REPEAT = 4 # Repeat 8 for 16 scale
     SCALE = 4
-    MODEL = ModelType.NAIMA_V2
+    MODEL = ModelType.NAIMA
     BENCHMARK = BenchmarkType.NYUV2
 
     @staticmethod

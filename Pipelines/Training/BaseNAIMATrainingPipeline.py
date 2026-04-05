@@ -12,7 +12,6 @@ from Utilities.PathManager import PathManager
 from torch.optim.optimizer import Optimizer
 import torch.nn as nn
 import torch
-
 from Utilities.StatsHelpers import StatsHelpers
 
 class BaseNAIMATrainingPipeline(PipelineBase):

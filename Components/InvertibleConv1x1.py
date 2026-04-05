@@ -4,7 +4,6 @@ import torch.nn.functional as F
 import numpy as np
 import scipy.linalg
 
-
 class InvertibleConv1x1(nn.Module):
     def __init__(self, num_channels, LU_decomposed=False):
         super().__init__()

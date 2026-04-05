@@ -205,3 +205,11 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+MIDDLE/
+model_states_*/
+NYUV2/
+dinov2_vits14_pretrain.pth
+RGBDD/
+TOFDSRD/
+NYUV2OLD/
+LU/

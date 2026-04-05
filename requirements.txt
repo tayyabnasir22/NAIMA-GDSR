@@ -1,0 +1,11 @@
+pandas
+pillow
+opencv-python
+tqdm
+torch
+tensorboardX
+pyyaml
+imageio
+torchvision
+torchinfo
+scipy
