@@ -68,6 +68,9 @@ python train.py <scale> <model_key>
 
 Place your benchmark data under a folder whose name matches the `BenchmarkType` value (e.g. `./NYUV2/` for NYU v2), consistent with `NAIMATrainer` paths.
 
+#### Data Processing available at:
+https://github.com/tayyabnasir22/GDSR-Data-Preperation
+
 ## Testing (`test.py`)
 
 `test.py` is the **entry point for evaluation**. It calls static methods on `TestingOrchestrator` that construct a `NAIMA_Validator` with the appropriate `NAIMA_ValidationHelper` (RGB-guided) or `NAIMA_ValidationHelperBenchmark` (benchmark-style evaluation), then runs `TestModel` for each dataset and scale.
