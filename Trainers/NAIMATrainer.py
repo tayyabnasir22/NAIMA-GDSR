@@ -45,7 +45,7 @@ class NAIMATrainer(BaseTrainer):
             train_repeat=self._repeat,
             total_examples=1000,
             epoch_val=200,
-            epoch_save=200,
+            epoch_save=5,
             batch_size=self._batch_size,
             epochs=200,
             start_learning_rate=0.0001,
