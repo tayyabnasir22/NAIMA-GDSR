@@ -17,11 +17,11 @@ If you use this code or build upon the NAIMA-GDSR method in your research, **ple
 
 ```bibtex
 @article{naima_gdsr,
-  title   = {{TODO}: Full paper title},
-  author  = {{TODO}: Author list},
-  journal = {{TODO}: Venue or arXiv},
-  year    = {{TODO}},
-  url     = {{TODO}: Stable link to the paper},
+  title   = {NAIMA: Semantics Aware RGB Guided Depth Super-Resolution},
+  author  = {Tayyab Nasir, Daochang Liu, Ajmal Mian},
+  journal = {arXiv},
+  year    = {2026},
+  url     = {https://doi.org/10.48550/arXiv.2604.04407},
 }
 ```
 
