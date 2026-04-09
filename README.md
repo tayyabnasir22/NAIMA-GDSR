@@ -1,4 +1,4 @@
-# NAIMA-GDSR
+# NAIMA: Semantics Aware RGB Guided Depth Super-Resolution
 
 Official implementation of **NAIMA** for **guided depth super-resolution (GDSR)**. 
 
