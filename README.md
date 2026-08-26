@@ -1,4 +1,4 @@
-# NAIMA-GDSR
+# NAIMA: Semantics Aware RGB Guided Depth Super-Resolution
 
 Official implementation of **NAIMA** for **guided depth super-resolution (GDSR)**. 
 
@@ -13,7 +13,7 @@ If you rely on that shared design or compare against INR-ASSR baselines, please 
 
 ## Citation
 
-If you use this code or build upon the NAIMA-GDSR method in your research, **please cite our paper** that introduces NAIMA for guided depth super-resolution. Replace the placeholder fields below with the final title, authors, venue, and identifier (arXiv, DOI, or publisher URL) once your publication is public.
+If you use this code or build upon the NAIMA-GDSR method in your research, **please cite our paper** that introduces NAIMA for guided depth super-resolution.
 
 ```bibtex
 @article{nasir2026naimasemanticsawarergb,
