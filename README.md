@@ -1,38 +1,41 @@
 # NAIMA: Semantics Aware RGB Guided Depth Super-Resolution
 
-Official implementation of **NAIMA** for **guided depth super-resolution (GDSR)**. 
+Official implementation of **NAIMA** for **guided depth super-resolution (GDSR)**.
 
-## Acknowledgments
-
-**Configurations, pipeline layout, and orchestration patterns** in this repository are adapted from the [INR-ASSR Empirical Analysis](https://github.com/tayyabnasir22/INR-ASSR-Emperical-Analysis) framework (training/testing orchestrators, dataclass-style configs, pipeline bases, validators, and related utilities). That project provides a unified interface for training and benchmarking INR-based arbitrary-scale super-resolution methods; this repo specializes it for NAIMA on GDSR benchmarks.
-
-If you rely on that shared design or compare against INR-ASSR baselines, please also cite the INR-ASSR empirical study:
-
-> **INR-ASSR: Empirical Analysis of Implicit Neural Representations for Arbitrary-Scale Super-Resolution**  
-> arXiv:2601.17723 — <https://arxiv.org/abs/2601.17723>
+Paper: [arXiv:2604.04407](https://arxiv.org/abs/2604.04407)
 
 ## Citation
 
-If you use this code or build upon the NAIMA-GDSR method in your research, **please cite our paper** that introduces NAIMA for guided depth super-resolution.
+If you use this code or build upon the NAIMA-GDSR method in your research, please cite:
 
 ```bibtex
 @article{nasir2026naimasemanticsawarergb,
   title   = {NAIMA: Semantics Aware RGB Guided Depth Super-Resolution},
-  author  = {Tayyab Nasir, Daochang Liu, Ajmal Mian},
-  journal = {arXiv},
+  author  = {Nasir, Tayyab and Liu, Daochang and Mian, Ajmal},
+  journal = {arXiv preprint arXiv:2604.04407},
   year    = {2026},
-  url     = {https://doi.org/10.48550/arXiv.2604.04407},
+  url     = {https://doi.org/10.48550/arXiv.2604.04407}
 }
 ```
 
 ## Requirements
 
-- Python 3.12 recommended  
-- Next, run the following to create a new environment:
+Python 3.12 is recommended.
+
+1. Create a new virtual environment:
+
 ```bash
 python3.12 -m venv env
 ```
-- Install dependencies:
+
+2. Activate the environment:
+
+```bash
+source env/bin/activate
+```
+
+3. Install dependencies:
+
 ```bash
 python3 -m pip install -r requirements.txt
 ```
@@ -68,26 +71,25 @@ python train.py <scale> <model_key>
 
 Place your benchmark data under a folder whose name matches the `BenchmarkType` value (e.g. `./NYUV2/` for NYU v2), consistent with `NAIMATrainer` paths.
 
-#### Data Processing available at:
-https://github.com/tayyabnasir22/GDSR-Data-Preperation
+**Data preparation:** scripts for preparing the benchmark datasets are available at [GDSR-Data-Preperation](https://github.com/tayyabnasir22/GDSR-Data-Preperation).
 
 ## Testing (`test.py`)
 
 `test.py` is the **entry point for evaluation**. It calls static methods on `TestingOrchestrator` that construct a `NAIMA_Validator` with the appropriate `NAIMA_ValidationHelper` (RGB-guided) or `NAIMA_ValidationHelperBenchmark` (benchmark-style evaluation), then runs `TestModel` for each dataset and scale.
-
-**Default script behavior**
-
-The provided `main()` runs a **fixed sequence** of evaluations: for each of several `BenchmarkType` values it runs 4×, 8×, and 16× (with separate code paths for standard vs. “benchmark” helpers where applicable). For day-to-day use, **comment out** the lines you do not need so only the desired dataset and scale run.
-
-**Checkpoints**
-
-Available at: https://drive.google.com/drive/folders/1RNuYeMEkhs3dhOV4YPfbpIOc1dgp8TSd?usp=sharing
 
 **Command line**
 
 ```bash
 python test.py
 ```
+
+**Default script behavior**
+
+The provided `main()` runs a **fixed sequence** of evaluations: for each of several `BenchmarkType` values it runs 4×, 8×, and 16× (with separate code paths for standard vs. "benchmark" helpers where applicable). For day-to-day use, **comment out** the lines you do not need so only the desired dataset and scale run.
+
+**Checkpoints**
+
+Pretrained checkpoints are available [here](https://drive.google.com/drive/folders/1RNuYeMEkhs3dhOV4YPfbpIOc1dgp8TSd?usp=sharing).
 
 ## Repository structure
 
@@ -105,6 +107,15 @@ python test.py
 | `TrainingHelpers/` / `ValidationHelpers/` | Epoch loops, metrics, and dataset-specific validation helpers. |
 | `Utilities/` | Paths, logging, dataloaders, evaluation metrics, image I/O. |
 
+## Acknowledgments
+
+**Configurations, pipeline layout, and orchestration patterns** in this repository are adapted from the [INR-ASSR Empirical Analysis](https://github.com/tayyabnasir22/INR-ASSR-Emperical-Analysis) framework (training/testing orchestrators, dataclass-style configs, pipeline bases, validators, and related utilities). That project provides a unified interface for training and benchmarking INR-based arbitrary-scale super-resolution methods; this repo specializes it for NAIMA on GDSR benchmarks.
+
+If you rely on that shared design or compare against INR-ASSR baselines, please also cite the INR-ASSR empirical study:
+
+> **Implicit Neural Representation-Based Continuous Single Image Super-Resolution: An Empirical Benchmark**
+> arXiv:2601.17723 — <https://arxiv.org/abs/2601.17723>
+
 ## License
 
-See [LICENSE](LICENSE).
+This project is licensed under the MIT License — see [LICENSE](LICENSE).
